@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Андрей Костин](https://up.htmlacademy.ru/htmlcss/23/user/854081).
-* Наставник: `Неизвестно`.
+* Наставник: [Антон Шабельников] https://htmlacademy.ru/profile/artyglitch.
 
 ---
 
