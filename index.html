@@ -49,7 +49,32 @@
       <b>Заинтересовались?</b>
       <p>Укажите предполагаемые даты поездки,
         и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <button class="button" type="button">поиск гостиницы в седоне</button>
+      <div class="modal modal-search">
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <p><label for="check-in-field">Дата заезда:</label>
+            <input type="text" name="check-in" id="check-in-field" placeholder="24 апреля 2017">
+          </p>
+          <p><label for="check-out-field">Дата выезда:</label>
+            <input type="text" name="check-out" id="check-out-field" placeholder="4 июля 2017">
+          </p>
+
+          <p><label for="adult-tickets-field">Взрослые:</label>
+            <button class="change-value increase-value" type="button" arial-label="добавить еще один взрослый билет">+</button>
+            <input type="number" name="adult-tickets" id="adult-tickets-field" value="2">
+            <button class="change-value reduce-value" type="button" arial-label="убрать один взрослый билет">-</button>
+          </p>
+          <p><label for="children-tickets-field">Дети:</label>
+            <button class="change-value increase-value" type="button" arial-label="добавить еще один детский билет">+</button>
+            <input type="number" name="children-tickets" id="children-tickets-field" value="0">
+            <button class="change-value reduce-value" type="button" arial-label="убрать один детский билет">-</button>
+          </p>
+
+          <button class="button" type="submit">Найти</button>
+        </form>
+      </div>
     </section>
+
   </main>
   <footer class="page-footer">
     <a href="#" class="visit-sedona">#visitSEDONA</a>
