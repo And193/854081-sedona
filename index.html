@@ -14,20 +14,20 @@
     <nav class="main-nav">
       <a class="logo">
         <img src="img/content/logo.svg" alt="City of Sedona" width="140" height="72">
-        Sedona
+        <span class="visually-hidden">Sedona</span>
       </a>
       <ul class="main-nav__list">
         <li>
-          <a href="#">Информация</a>
+          <a class="main-nav__link" href="#">Информация</a>
         </li>
         <li>
-          <a href="#">Фото и видео</a>
+          <a class="main-nav__link" href="#">Фото и видео</a>
         </li>
         <li>
-          <a href="#">Карта штата</a>
+          <a class="main-nav__link" href="#">Карта штата</a>
         </li>
         <li>
-          <a href="hotels.html">Гостиницы</a>
+          <a class="main-nav__link" href="hotels.html">Гостиницы</a>
         </li>
       </ul>
     </nav>
@@ -52,7 +52,7 @@
       <b>Заинтересовались?</b>
       <p>Укажите предполагаемые даты поездки,
         и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      <a href="#" class="button" type="button">поиск гостиницы в седоне</button>
+      <a href="#" class="button button--open-order">поиск гостиницы в седоне</a>
       <div class="modal modal-search">
         <form action="https://echo.htmlacademy.ru" method="post">
           <p><label for="check-in-field">Дата заезда:</label>
@@ -64,15 +64,16 @@
 
           <p><label for="adult-tickets-field">Взрослые:</label>
             <button class="change-value increase-value" type="button" arial-label="добавить еще один взрослый билет">+</button>
-            <input type="number" name="adult-tickets" id="adult-tickets-field" value="2">
+            <input type="text" name="adult-tickets" id="adult-tickets-field" value="2" pattern="[0-9]{1,3}">
             <button class="change-value reduce-value" type="button" arial-label="убрать один взрослый билет">-</button>
           </p>
           <p><label for="children-tickets-field">Дети:</label>
             <button class="change-value increase-value" type="button" arial-label="добавить еще один детский билет">+</button>
-            <input type="number" name="children-tickets" id="children-tickets-field" value="0">
+            <input type="text" name="children-tickets" id="children-tickets-field" value="0" pattern="[0-9]{1,3}">
             <button class="change-value reduce-value" type="button" arial-label="убрать один детский билет">-</button>
           </p>
-          <button class="button" type="submit">Найти</button>
+          <button class="button button--search" type="submit">Найти
+          </button>
         </form>
       </div>
     </section>
@@ -84,19 +85,19 @@
     <h2 class="visually-hidden">Седона в социальных сетях</h2>
       <ul class="socials__list">
         <li class="socials__item">
-          <a href="#" class="socials__link social-tw">Твиттер</a>
+          <a href="#" class="socials__link social-tw"><span class="visually-hidden">Твиттер</span></a>
         </li>
         <li class="socials__item">
-          <a href="#" class="socials__link social-fb">Фейсбук</a>
+          <a href="#" class="socials__link social-fb"><span class="visually-hidden">Фейсбук</span></a>
         </li>
         <li class="socials__item">
-          <a href="#" class="socials__link social-youtube">Ютюб</a>
+          <a href="#" class="socials__link social-youtube"><span class="visually-hidden">Ютюб</span></a>
         </li>
       </ul>
     </section>
     <p class="copyryght">
       <span>Website by</span>
-      <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/content/logo-htmlacademy.svg" alt="HTML Academy" width="115" height="41">Html Academy</a>
+      <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/content/logo-htmlacademy.svg" alt="HTML Academy" width="115" height="41"><span class="visually-hidden">Html Academy</span></a>
     </p>
   </footer>
 </body>

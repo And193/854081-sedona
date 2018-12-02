@@ -15,20 +15,20 @@
     <nav class="main-nav">
       <a href="index.html" class="logo">
         <img src="img/content/logo.svg" alt="City of Sedona" width="140" height="72">
-        Sedona
+        <span class="visually-hidden">Sedona</span>
       </a>
       <ul class="main-nav__list">
         <li>
-          <a href="#">Информация</a>
+          <a class="main-nav__link" href="#">Информация</a>
         </li>
         <li>
-          <a href="#">Фото и видео</a>
+          <a class="main-nav__link" href="#">Фото и видео</a>
         </li>
         <li>
-          <a href="#">Карта штата</a>
+          <a class="main-nav__link" href="#">Карта штата</a>
         </li>
         <li>
-          <a>Гостиницы</a>
+          <a class="main-nav__link main-nav__link--active">Гостиницы</a>
         </li>
       </ul>
     </nav>
@@ -82,7 +82,7 @@
             </div>
           </div>
 
-          <button class="button" type="submit">Показать</button>
+          <button class="find-hotels" type="submit">Показать</button>
         </fieldset>
       </form>
     </section>
@@ -90,14 +90,17 @@
     <div class="sort">
       <div class="sort-area">
         <b class="sort-result">Найдено: <span class="sort-result__value">3</span></b>
-        <span>Сортировка:</span>
-        <a href="#">По цене</a>
-        <a href="#">По типу</a>
-        <a href="#">По рейтингу</a>
+        <div class="sort-by-type"></div>
+          <span>Сортировка:</span>
+          <a class="sort-by-type__link sort-by-type__link--active" href="#">По цене</a>
+          <a class="sort-by-type__link" href="#">По типу</a>
+          <a class="sort-by-type__link" href="#">По рейтингу</a>
+        </div>
       </div>
       <div class="sort-buttons">
-        <a href="#" class="sort-order sort-order__increase" aria-label="по возрастанию">▲</button>
-        <a href="#" class="sort-order sort-order__reduce" aria-label="по убыванию">▼</button>
+        <a href="#" class="sort-order" aria-label="по возрастанию">
+          ▲</a>
+        <a href="#" class="sort-order sort-order--active" aria-label="по убыванию">▼</a>
       </div>
     </div>
 
@@ -159,7 +162,7 @@
     </section>
     <p class="copyryght">
       <span>Website by</span>
-      <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/content/logo-htmlacademy.svg" alt="HTML Academy" width="115" height="41">Html Academy</a>
+      <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/content/logo-htmlacademy.svg" alt="HTML Academy" width="115" height="41"><span class="visually-hidden">Html Academy</span></a>
     </p>
   </footer>
 </body>
