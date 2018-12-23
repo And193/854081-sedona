@@ -879,11 +879,11 @@ img{
   background: url("../img/icons/checkbox.svg") no-repeat 0 0;
 }
 
-.checkbox-container-inner input:checked + label::before{
+input[type="checkbox"]:checked + label::before{
   background-position: 0 -23px;
 }
 
-.checkbox-container-inner input:disabled + label::before{
+input[type="checkbox"]:disabled + label::before{
   opacity: 0.5;
 }
 
