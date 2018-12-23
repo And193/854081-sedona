@@ -1,3 +1,63 @@
+@-webkit-keyframes move-down{
+  from{
+    -webkit-transform: translateY(-100%)
+                scaleY(0);
+            transform: translateY(-100%)
+                scaleY(0);
+  }
+  to{
+    -webkit-transform: translateY(0)
+                scaleY(1);
+            transform: translateY(0)
+                scaleY(1);
+  }
+}
+
+@keyframes move-down{
+  from{
+    -webkit-transform: translateY(-100%)
+                scaleY(0);
+            transform: translateY(-100%)
+                scaleY(0);
+  }
+  to{
+    -webkit-transform: translateY(0)
+                scaleY(1);
+            transform: translateY(0)
+                scaleY(1);
+  }
+}
+
+@-webkit-keyframes move-up{
+  from{
+    -webkit-transform:  translateY(0)
+                scaleY(1);
+            transform:  translateY(0)
+                scaleY(1);
+  }
+  to{
+    -webkit-transform:  translateY(-100%)
+                scaleY(0);
+            transform:  translateY(-100%)
+                scaleY(0);
+  }
+}
+
+@keyframes move-up{
+  from{
+    -webkit-transform:  translateY(0)
+                scaleY(1);
+            transform:  translateY(0)
+                scaleY(1);
+  }
+  to{
+    -webkit-transform:  translateY(-100%)
+                scaleY(0);
+            transform:  translateY(-100%)
+                scaleY(0);
+  }
+}
+
 html, body{
   width: 100%;
   height: 100%;
@@ -48,10 +108,10 @@ body{
 }
 
 .button--open-order{
-  width: 570px;
+  width: 568px;
   margin: 0 auto;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
   text-align: center;
 }
@@ -109,6 +169,7 @@ body{
 .button--more, .button--book{
   margin-top: 14px;
   padding: 3px 17px;
+  padding-left: 16px;
 
   font-size: 14px;
   line-height: 21px;
@@ -145,6 +206,7 @@ img{
           align-items: center;
 
   padding: 15px 73px;
+  padding-bottom: 16px;
 }
 
 .main-nav__list{
@@ -153,7 +215,9 @@ img{
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -251,7 +315,7 @@ img{
 
 .about-us h2{
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
   padding: 0;
 
   font-size: 21px;
@@ -350,8 +414,8 @@ img{
           box-sizing: border-box;
   width: 400px;
   padding: 47px;
-  padding-top: 160px;
-  padding-bottom: 85px;
+  padding-top: 162px;
+  padding-bottom: 83px;
 
   color: #000000;
   background-color: #ffffff;
@@ -374,55 +438,81 @@ img{
 
 .order{
   position: relative;
+  z-index: 1;
 
   padding-top: 56px;
+
+  background-color: #ffffff;
 }
 
 .order-container{
-  width: 440px;
-  margin: 0 auto;
-  margin-bottom: 45px;
-
-  text-align: center;
+  position: relative;
+  z-index: 2;
+  background-color: #ffffff;
 }
 
-.order-container b{
+.order__info{
+  width: 440px;
+  margin: 0 auto;
+  margin-bottom: 46px;
+
+  text-align: center;
+
+  background-color: #ffffff;
+}
+
+.order__info b{
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   color: #000000;
 }
 
-.order-container p{
+.order__info p{
   margin: 0;
-  margin-top: 23px;
+  margin-top: 25px;
   padding: 0 21px;
 
   line-height: 24px;
 }
 
 .modal-search{
+  display: none;
   position: absolute;
   top: 100%;
   left: 50%;
+  z-index: -1;
 
   -webkit-box-sizing: border-box;
 
           box-sizing: border-box;
-  width: 570px;
-  margin-left: -285px;
-  padding: 55px;
-  padding-top: 53px;
+  width: 568px;
+  margin-left: -284px;
+  padding: 56px;
+  padding-top: 56px;
   padding-bottom: 53px;
-  z-index: 1;
-
   background-color: #ffffff;
   -webkit-box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1)
 }
 
+.modal-search--open{
+  display: block;
+  -webkit-animation-name: move-down;
+          animation-name: move-down;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+
 .modal-search--close{
-  display: none;
+  display: block;
+  -webkit-animation-name: move-up;
+          animation-name: move-up;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 .modal-search form{
@@ -469,8 +559,9 @@ img{
 }
 
 .reg-date input{
-  width: 348px;
-  padding: 3px 35px 3px 13px;
+  width: 345px;
+  margin-left: auto;
+  padding: 7px 35px 7px 11px;
 }
 
 .reg-date p{
@@ -481,12 +572,10 @@ img{
   display: -ms-flexbox;
 
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+
   margin: 0;
   margin-bottom: 30px;
   padding: 0;
@@ -504,7 +593,7 @@ img{
 
   border: none;
   background-color: transparent;
-  background-image: url("../img/icons/calendar-sprite.svg");
+  background-image: url("../img/icons/calendar-sprite.png");
   background-position: 0 -22px;
   background-repeat: no-repeat;
 }
@@ -534,7 +623,10 @@ img{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 348px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 345px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -543,13 +635,9 @@ img{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50%;
 }
 
 .tickets__half-width p{
@@ -565,9 +653,13 @@ img{
 
 .tickets__half-width input{
   width: 38px;
-  padding: 4px;
+  padding: 6px;
 
   text-align: center;
+}
+
+.tickets__half-width label{
+  margin-right: 25px;
 }
 
 .change-value{
@@ -592,6 +684,8 @@ img{
 .change-value:active{
   color: #81b3d2;
 }
+
+/*page-footer*/
 
 .page-footer{
   position: relative;
@@ -618,14 +712,15 @@ img{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 35px;
+  padding-top: 36px;
   padding-bottom: 35px;
 
   background-color: rgba(255, 255, 255, 0.9);
@@ -636,9 +731,6 @@ img{
 .copyright{
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 400px;
-  margin: 0;
-  padding: 0;
 
   text-align: center;
 }
@@ -646,6 +738,7 @@ img{
 .visit-sedona{
   margin: 0;
   padding: 0;
+  width: 400px;
 }
 
 .visit-sedona a{
@@ -656,6 +749,7 @@ img{
 }
 
 .socials__list{
+  width: 402px;
   margin: 0;
   padding: 0;
 
@@ -712,12 +806,14 @@ img{
       -ms-flex-pack: center;
           justify-content: center;
 
+  width: 398px;
 
   color: #000000;
 }
 
 .copyright__link{
   margin-left: 8px;
+  line-height: 0;
 }
 
 .copyright__link:hover path,
@@ -732,7 +828,7 @@ img{
 /*       стили для hotels.html      */
 
 .filters{
-  padding: 29px 73px;
+  padding: 28px 73px;
   padding-bottom: 31px;
 
   color: rgba(255, 255, 255, 1);
@@ -936,7 +1032,7 @@ img{
 .filter-range input:-ms-input-placeholder{
   color:#ffffff;
 }
-
+/*Блок сортировки*/
 .sort{
   display: -webkit-box;
   display: -ms-flexbox;
@@ -948,6 +1044,7 @@ img{
       -ms-flex-align: center;
           align-items: center;
   padding: 31px 72px;
+  padding-right: 70px;
 
   border-bottom: 1px solid #e5e5e5;
 }
@@ -971,6 +1068,10 @@ img{
   line-height: 26px;
   font-weight: 700;
   color: #000000;
+}
+
+.sort-by-type{
+  padding-top: 2px;
 }
 
 .sort-by-type span{
@@ -1025,14 +1126,13 @@ img{
 .sort-order--active{
   color: #81b3d2;
 }
-
+/*Список отелей*/
 .hotels__item{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 24px 72px;
+
+  padding: 24px 73px;
   padding-bottom: 30px;
 
   border-bottom: 1px solid #e5e5e5;
@@ -1049,6 +1149,8 @@ img{
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+
+  margin-right: 10px;
 }
 
 .hotel-info__half-with-container{
@@ -1083,16 +1185,20 @@ img{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 240px;
+  width: 240px;
   margin-left: auto;
   margin-top: 5px;
 }
 
 .hotels__rating p{
-  padding: 3px 14px;
+  padding: 3px 12px;
+  padding-bottom: 4px;
+  padding-left: 15px;
   margin: 0;
+  margin-left: auto;
   -ms-align-self: flex-end;
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   color: #666666;
   background-color: #f2f2f2;
 }
@@ -1105,7 +1211,7 @@ img{
     url("../img/decor/star.svg");
 
   background-repeat: no-repeat;
-  background-position: top right, top right 24px, top right 48px, top right 72px;
+  background-position: top right, top right 23px, top right 47px, top right 71px;
 }
 
 .hotels__rating--2{
@@ -1115,7 +1221,7 @@ img{
     url("../img/decor/star.svg");
 
   background-repeat: no-repeat;
-  background-position: top right, top right 24px, top right 48px;
+  background-position: top right, top right 23px, top right 47px;
 }
 
 .hotels__rating--3{
@@ -1124,5 +1230,5 @@ img{
     url("../img/decor/star.svg");
 
   background-repeat: no-repeat;
-  background-position: top right, top right 24px;
+  background-position: top right, top right 23px;
 }
